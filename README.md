@@ -4,15 +4,15 @@ Résumé des commandes nécéssaires à une installation d'archlinux
 ## Formatage du disque
 1. Partition de Boot
 
-*"n" pour new partition
-*"p" pour primary
-*partition number 'default'
-*first sector 'default'
-*"+200M" pour la taille
+* "n" pour new partition
+* "p" pour primary
+* partition number 'default'
+* first sector 'default'
+* "+200M" pour la taille
 
 2. Partition swap
 
-même chose que pour la partition de boot, sauf que la taille doit etre égale à au moins une fois et demie la taille de la RAM
+Même chose que pour la partition de boot, sauf que la taille doit etre égale à au moins une fois et demie la taille de la RAM
 
 3. Partition root
 
