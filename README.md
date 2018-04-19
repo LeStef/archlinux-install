@@ -70,7 +70,7 @@ On vérifie que tout est ok
 
 `lsblk`
 
-## Installation archlinux
+## Installation des paquets de base
 
 On passe la commande magique pacstrap :
 
@@ -135,10 +135,11 @@ Décommenter les lignes nécéssaires, puis
 
 puis :
 
-`vim /etc/locale.conf`
+`echo LANG="fr_FR.UTF-8" > /etc/locale.conf`
 
-`LANG=fr_FR.UTF-8`
+## Disposition du clavier
 
+`echo KEYMAP=fr > /etc/vconsole.conf`
 
 ## Heure système
 
@@ -154,7 +155,7 @@ Puis :
 
 `echo '127.0.1.1 archlinux-pc.localdomain archlinux-pc' >> /etc/hosts`
 
-# Sortie et reboot
+## Sortie et reboot
 
 Sortir du chroot :
 
