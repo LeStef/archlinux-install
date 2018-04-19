@@ -23,11 +23,19 @@ Même chose que pour la partition de boot, hormis que la taille prend le reste d
 ## Définition des filesystems
 
 1. partition boot
+
 `mkfs.ext4 /dev/sdb1`
+
 2. partition root
+
 `mkfs.ext4/dev/sdb3`
+
 3. partition home
+
 `mkfs.ext4 /dev/sdb4`
+
 4. Partition swap
+
 `mkswap /dev/sda2`
+
 `swapon /dev/sda2`
