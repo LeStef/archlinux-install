@@ -22,6 +22,6 @@ Même chose que pour la partition de boot, hormis que la taille prend le reste d
 
 ## Définition des filesystems
 
-> mkfs.ext4 /dev/sdb1 (boot)
-> mkfs.ext4/dev/sdb3 (root)
-> mkfs.ext4 /dev/sdb4 (home)
+`mkfs.ext4 /dev/sdb1 (boot)`
+`mkfs.ext4/dev/sdb3 (root)`
+`mkfs.ext4 /dev/sdb4 (home)`
