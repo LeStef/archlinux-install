@@ -106,8 +106,7 @@ Mise en marche au prochain reboot
 
 `systemctl enable NetworkManager`
 
-
-## Installation de Grub
+## Installation de Grub
 
 `pacman -S grub`
 
