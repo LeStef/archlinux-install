@@ -206,3 +206,28 @@ Voici une sélection de paquets à installer pour avoir des belles polices bien 
 
 `pacman -S xorg-fonts-type1 ttf-dejavu artwiz-fonts font-bh-ttf font-bitstream-speedo gsfonts sdl_ttf ttf-bitstream-vera        ttf-cheapskate ttf-liberation ttf-freefont ttf-arphic-uming ttf-baekmuk`
 
+5. Xfce
+
+`pacman -S xfce4 xfce4-goodies`
+
+Pour le lancer manuellement : 
+
+`startxfce4`
+
+Sinon :
+
+`pacman -S lightdm`
+
+LigthDM nécessite l'installation d'un greeter (interface utilisateur), le greeter par défaut est lightdm-gtk-greeter et n'est pas installé de base par le paquet lightdm. Pour l'installer : 
+
+`pacman -S lightdm-gtk-greeter`
+
+Pour l'activer : 
+
+`systemctl enable lightdm.service`
+
+Pour le démarrer sans rebooter : 
+
+`systemctl start lightdm.service`
+
+
