@@ -125,7 +125,9 @@ Génération du fichier de configuration associé
 
 ## Ajout d'un nouvel utilisateur
 
-`useradd -G audio,log,lp,optical,sys,storage,scanner,systemd-journal,user,video,wheel -m stef`
+`useradd -G audio,log,lp,optical,sys,storage,scanner,systemd-journal,user,video,wheel -m <utilisateur>`
+
+`passwd <utilisateur>`
 
 ## Génération des locales
 
