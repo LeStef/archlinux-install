@@ -179,3 +179,24 @@ Reboot :
 Pour avoir un environnement minimal de test, en attendant d'avoir installé et configuré votre environnement graphique, vous pouvez installer les paquets suivants (vous permettant ainsi de lancer le gestionnaire de fenêtres Twm par un simple startx sans disposer de .xinitrc dans votre $HOME, par l'intermédiaire du /etc/X11/xinit/xinitrc ): 
 
 `pacman -S xorg-twm xorg-xclock xterm`
+
+Pour un test rapide et sans risque de X (il se fermera tout seul au bout de 10s), vous pouvez créer un fichier .xinitrc de test et lancer startx : 
+
+```
+echo "xterm & sleep 10" > ~/.xinitrc
+startx
+```
+
+3. Clavier
+
+`vim /etc/X11/xorg.conf.d/10-keyboard-layout.conf`
+
+```
+Section "InputClass"
+    Identifier         "Keyboard Layout"
+    MatchIsKeyboard    "yes"
+    Option             "XkbLayout"  "fr"
+    Option             "XkbVariant" "latin9" # accès aux caractères spéciaux plus logique avec "Alt Gr" (ex : « » avec "Alt Gr" w x)
+EndSection
+```
+
