@@ -200,3 +200,12 @@ Section "InputClass"
 EndSection
 ```
 
+4. Polices
+
+Voici une sélection de paquets à installer pour avoir des belles polices bien lissées dans toutes les applis graphiques et ne plus jamais se poser de question à ce sujet. 
+
+pacman -S xorg-fonts-type1 ttf-dejavu artwiz-fonts font-bh-ttf \
+          font-bitstream-speedo gsfonts sdl_ttf ttf-bitstream-vera \
+          ttf-cheapskate ttf-liberation \
+          ttf-freefont ttf-arphic-uming ttf-baekmuk # Polices pour sites multilingue
+
