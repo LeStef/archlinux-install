@@ -129,6 +129,14 @@ Génération du fichier de configuration associé
 
 `passwd <utilisateur>`
 
+Pour l'ajouter au sudoers :
+
+`visudo`
+
+Puis décommenter la ligne :
+
+`%Wheel ALL=(ALL) ALL`
+
 ## Génération des locales
 
 `vim /etc/locale.gen`
