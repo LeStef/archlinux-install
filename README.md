@@ -168,3 +168,14 @@ Reboot :
 
 `reboot`
 
+## Environnement graphique
+
+1. Installation de Xorg
+
+`pacman -Syu xorg-server xorg-xinit`
+
+2. Installation d'un environnement de test Xorg
+
+Pour avoir un environnement minimal de test, en attendant d'avoir installé et configuré votre environnement graphique, vous pouvez installer les paquets suivants (vous permettant ainsi de lancer le gestionnaire de fenêtres Twm par un simple startx sans disposer de .xinitrc dans votre $HOME, par l'intermédiaire du /etc/X11/xinit/xinitrc ): 
+
+`pacman -S xorg-twm xorg-xclock xterm`
