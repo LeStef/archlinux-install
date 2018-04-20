@@ -123,6 +123,9 @@ Génération du fichier de configuration associé
 
 `passwd`
 
+## Ajout d'un nouvel utilisateur
+
+`useradd -G audio,log,lp,optical,sys,storage,scanner,systemd-journal,user,video,wheel -m stef`
 
 ## Génération des locales
 
