@@ -56,6 +56,25 @@ dhcpcd wlan0
 ```
 
 ## Formatage du disque
+
+Dans cet exemple, nous utiliserons fdisk (pour une utilisation plus intuitive, cfdisk est recommandé).
+
+Identifions le disque cible à partitionner :
+```
+lsblk
+```
+
+```
+fdisk /dev/sdx
+```
+
+Voici un modèle basique de partionnement de disque pour archlinux que nous allons utiliser :
+
+* Une partition de Boot de 200M, formater en ext2
+* Une partition Racine de 25G, formater en ext4
+* Une partition Swap de 4G, formater en swap
+* une partition Home du reste du disque
+
 1. Partition de Boot
 
 * "n" pour new partition
