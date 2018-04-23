@@ -1,6 +1,60 @@
 # archlinux-install
 Résumé des commandes nécéssaires à une installation d'archlinux
 
+# Réseau
+
+Depuis une iso, sur un portable en wifi, voici les manips à effectuer pour avoir internet
+
+Identifier l'identifiant de l'interface réseau
+```
+iwconfig (deprecated)
+ou
+ip addr
+```
+Partons du principe que l'id de l'interface est wlan0
+
+
+
+Activer l'interface
+```
+ip link set wlan0 up 
+```
+
+Scanner les reseaux disponible pour récupérer les infos et l'essid
+```
+iw wlan0 scan
+```
+
+Créer un fichier /etc/wpa_supplicant/wpa_supplicant.conf
+```
+network={
+  ssid="mon-reseau"
+  psk="ma-clé"
+  priority=5
+}
+```
+Ou le générer avec wpa_passphrase :
+```
+wpa_passphrase "mon-reseau" "ma-cle" > /etc/wpa_supplicant/wpa_supplicant.conf
+```
+
+
+Ensuite, on lance la connexion proprement dite :
+```
+wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf
+```
+**Attention : Si networkmanager est installé, bien vérifier qu'il est désactivé via un systemctl stop NetworkManager**
+
+
+si ca fonctionne : 
+```
+wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
+```
+Il ne manque maintenant que les adresses réseau, configurez ceci avec ip, ou bien utilisez simplement DHCP si le réseau l'offre : 
+```
+dhcpcd wlan0
+```
+
 ## Formatage du disque
 1. Partition de Boot
 
